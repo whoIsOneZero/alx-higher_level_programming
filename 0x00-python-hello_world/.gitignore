@@ -1,0 +1,3 @@
+# ignore these files
+*.swp
+*main.py
