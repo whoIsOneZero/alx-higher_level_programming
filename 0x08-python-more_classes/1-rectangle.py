@@ -28,7 +28,7 @@ class Rectangle:
                 raise ValueError("width must be >= 0")
             # set the value otherwise
             self.__width = value
-            
+
         @property
         def height(self):
             """Get the height of the current rectangle"""
@@ -42,4 +42,4 @@ class Rectangle:
             elif value < 0:
                 raise ValueError("height must be >= 0")
             # set the value otherwise
-            self.__height= value
+            self.__height = value
