@@ -1,4 +1,4 @@
 -- Lists all databases of
---+ the MySQL server
+-- + the MySQL server
 
 SHOW DATABASES;
