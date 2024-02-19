@@ -13,7 +13,7 @@ if __name__ == "__main__":
     rows = cur.fetchall()
     temp = list(row[0] for row in rows)
     print(*temp, sep=", ")
-    #for state in rows:
-        #print(state)
+    # for state in rows:
+    # print(state)
     cur.close()
     db.close()
