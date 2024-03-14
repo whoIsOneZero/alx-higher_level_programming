@@ -7,7 +7,7 @@ class Rectangle {
     }
   }
 
-  print() {
+  print () {
     let i = 0;
     while (i < this.height) {
       console.log('X'.repeat(this.width));
@@ -15,8 +15,8 @@ class Rectangle {
     }
   }
 
-  rotate() {
-    let temp = this.height;
+  rotate () {
+    const temp = this.height;
     this.height = this.width;
     this.width = temp;
   }
