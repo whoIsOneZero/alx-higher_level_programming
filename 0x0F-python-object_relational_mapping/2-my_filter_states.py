@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""  lists all states from the database hbtn_0e_0_usa """
-import MySQLdb
-import sys
-
-
+""" Filter only state input by command line
+"""
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
-    cur = db.cursor()
-    match = sys.argv[4]
-    cur.execute("SELECT * FROM states WHERE name LIKE %s", (match, ))
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
-    cur.close()
-    db.close()
+    import sys
+    import MySQLdb
+
+    conn = MySQLdb.connect(user=sys.argv[1], password=sys.argv[2],
+                           database=sys.argv[3])
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM states ORDER BY id;")
+    query_rows = cursor.fetchall()
+    for row in query_rows:
+        if row[1] == sys.argv[4]:
+            print("{}".format(row))
+    cursor.close()
+    conn.close()
