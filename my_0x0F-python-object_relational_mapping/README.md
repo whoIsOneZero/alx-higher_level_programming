@@ -1,2 +1,0 @@
-# Object-Relational Mapping
-Project
